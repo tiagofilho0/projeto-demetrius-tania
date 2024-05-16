@@ -15,14 +15,14 @@
     Orgão Emissor: <input type="text" name="orgao" required><br>
     Profissão: <input type="text" name="profissao" required><br>
     Titulo de eleitor: <input type="text" name="titulo" required><br>
-    Estado Civil : <input type="radio" name="est_civil" value="1"> solteiro
-                   <input type="radio" name="est_civil" value="2"> casado
-                   <input type="radio" name="est_civil" value="3"> vúvo(a)<br>
+    Estado Civil : <input type="radio" name="est_civil" value=1> solteiro
+                   <input type="radio" name="est_civil" value=2> casado
+                   <input type="radio" name="est_civil" value=3> vúvo(a)<br>
     Data de nascimento: <input type="date" name="dt_nasc" required><br>
     sexo:<input type="radio" name="sexo" value="M"> masculino
          <input type="radio" name="sexo" value="F"> Feminino<br>
     Rua: <input type="text" name="rua_cont" size="50" required><br>
-    Nº <input type="text" name="num_cont"  required><br>
+    Nº <input type="number" name="num_cont"  required><br>
     Bairro <input type="text" name="bairro" required><br>
     Cidade <input type="text" name="cidade" required><br>
     UF:
@@ -61,13 +61,13 @@
          e-mail: <input type="text" name="email_cont" size="50"><br>
          Escolaridade:
          <select name="Escolaridade">
-            <option value="1">sem Escolaridade</option>
-            <option value="2">Fundamental I (1º a 5º serie)</option>
-            <option value="3">Fundamental II (6º a 9º serie)</option>
-            <option value="4">Médio (antigo º grau)</option>
-            <option value="5">Superior incompleto</option>
-            <option value="6">Superior completo</option>
-            <option value="7">Ignorado</option>
+            <option value=1>sem Escolaridade</option>
+            <option value=2>Fundamental I (1º a 5º serie)</option>
+            <option value=3>Fundamental II (6º a 9º serie)</option>
+            <option value=4>Médio (antigo º grau)</option>
+            <option value=5>Superior incompleto</option>
+            <option value=6>Superior completo</option>
+            <option value=7>Ignorado</option>
         </select><br>
         Rendimento Familiar Mensal: <input type="number" name="rend_fam" step="0.01" min="0.00"><br>
         Numeros de membros da família: <input type="number" name="membros">
@@ -78,7 +78,7 @@
         código de acesso: <input type="text" name="cod"><br>
         Nº do recibo do IR(se for necessário): <input type="text" name="num_ir"><br>
         Rua: <input type="text" name="rua_emp" size="50" required><br>
-    Nº <input type="text" name="num_emp"  required><br>
+    Nº <input type="number" name="num_emp"  required><br>
     Bairro <input type="text" name="bairro_emp" required><br>
     Cidade <input type="text" name="cidade_emp" required><br>
     UF:
@@ -114,14 +114,14 @@
          CEP: <input type="number" name="cep_emp" required><br>
          Telefone <input type="number" name="tel_emp"><br>
          e-mail: <input type="text" name="email_emp" size="50"><br>
-         Gera faturamento: <input type="radio" name="faturamento" value="1"> Sim
-                           <input type="radio" name="faturamento" value="0"> Não<br>
+         Gera faturamento: <input type="radio" name="faturamento" value=1> Sim
+                           <input type="radio" name="faturamento" value=0> Não<br>
         Quanto? (Valor Médio mensal):<input type="number" name="fat_mensal" step="0.01" min="0.00"><br>
         Segmento do negócio:
         <select name="segmento">
-            <option value="1">comércio</option>
-            <option value="2">Serviço</option>
-            <option value="3">indústria</option>
+            <option value=1>comércio</option>
+            <option value=2>Serviço</option>
+            <option value=3>indústria</option>
             </select><br>
             Data de abertura: <input type="date" name="dt_abertura"><br>
             Tem funcionário: <input type="radio" name="funcionario" value="1"> Sim
