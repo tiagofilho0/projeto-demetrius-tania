@@ -1,84 +1,103 @@
 <?php
-include(`conexap.js`);
+include('conexao.php');
 
-$nome = isset($_POST[`nome_cont`]) ? $_POST[`nome_cont`] : ``;
+$nome_cont = isset($_POST[`nome_cont`]) ? $_POST[`nome_cont`] : '';
 
-$cpf = isset($_POST[`cpf_cont`]) ? $_POST[`cpf_cont`] : ``;
+$cpf = isset($_POST['cpf']) ? $_POST['cpf'] : '';
 
-$rg = isset($_POST[`nome_rg`]) ? $_POST[`nome_rg`] : ``;
+$rg = isset($_POST['rg']) ? $_POST['rg'] : '';
 
-$orgao_emissor = isset($_POST[`org_cont`]) ? $_POST[`org_cont`] : ``;
+$orgao = isset($_POST['orgao']) ? $_POST['orgao'] : '';
 
-$Profissao = isset($_POST['pfs_cont']) ? $_POST['pfs_cont'] : '';
+$Profissao = isset($_POST['profissao']) ? $_POST['profissao'] : '';
 
-$titlo_de_eleitor = isset($_POST['title_cont']) ? $_POST['title_cont'] : '';
+$titulo = isset($_POST['titulo']) ? $_POST['titulo'] : '';
 
-$estado_civil = isset($_POST['estcl_cont']) ? $_POST['estcl_cont'] : '';
+$est_civ = isset($_POST['est_civ']) ? $_POST['est_civ'] : '';
 
-$sexo = isset($_POST['est1']) ? $_POST['est1'] : '';
+$dt_nasc = isset($_POST['dt_nasc']) ? $_POST['dt_nasc'] : '';
 
-$rua = isset($_POST['rua']) ? $_POST['rua'] : '';
+$sexo = isset($_POST['sexo']) ? $_POST['sexo'] : '';
 
-$numero = isset($_POST['numb']) ? $_POST['numb'] : '';
+$rua_cont = isset($_POST['rua_cont']) ? $_POST['rua_cont'] : '';
+
+$num_cont = isset($_POST['num_cont']) ? $_POST['num_cont'] : '';
 
 $bairro = isset($_POST['bairro']) ? $_POST['bairro'] : '';
 
 $cidade = isset($_POST['cidade']) ? $_POST['cidade'] : '';
 
-$uf = isset($_POST['uf_cont']) ? $_POST['uf_cont'] : '';
+$uf_cont = isset($_POST['uf_cont']) ? $_POST['uf_cont'] : '';
 
-$cep = isset($_POST['cep']) ? $_POST['cep'] : '';
+$cep_cont = isset($_POST['cep_cont']) ? $_POST['cep_cont'] : '';
 
-$Telefone = isset($_POST['Telefone']) ? $_POST['Telefone'] : '';
+$Tel_cont = isset($_POST['Tel_cont']) ? $_POST['Tel_cont'] : '';
 
-$celular = isset($_POST['celular']) ? $_POST['celular'] : '';
+$cel_cont = isset($_POST['cel_cont ']) ? $_POST['cel_cont '] : '';
 
-$email = isset($_POST['email']) ? $_POST['email'] : '';
+$email_cont = isset($_POST['email']) ? $_POST['email'] : '';
 
-$escolaridade = isset($_POST['uf_Esc']) ? $_POST['uf_Esc'] : '';
+$escolaridade = isset($_POST['escolaridade']) ? $_POST['escolaridade'] : '';
 
-$rendimentofml = isset($_POST['rendimento']) ? $_POST['rendimento'] : '';
+$rend_fam = isset($_POST['rend_fam ']) ? $_POST['rend_fam '] : '';
 
-$num_membro = isset($_POST['num_memb']) ? $_POST['num_memb'] : '';
+$membros = isset($_POST['membros']) ? $_POST['membros'] : '';
 
 $fantasia = isset($_POST['fantasia']) ? $_POST['fantasia'] : '';
 
-$rzsocial = isset($_POST['rzsocial']) ? $_POST['rzsocial'] : '';
+$razao = isset($_POST['razao']) ? $_POST['razao'] : '';
 
 $cnpj = isset($_POST['cnpj']) ? $_POST['cnpj'] : '';
 
-$cdgacesso = isset($_POST['cdgacesso']) ? $_POST['cdgacesso'] : '';
+$cod = isset($_POST['cod']) ? $_POST['cod'] : '';
 
-$nomnum_reciboe = isset($_POST['num_recibo']) ? $_POST['num_recibo'] : '';
+$num_ir = isset($_POST['num_ir']) ? $_POST['num_ir'] : '';
 
-$ruaempresa = isset($_POST['ruaempresa']) ? $_POST['ruaempresa'] : '';
+$rua_emp = isset($_POST['rua_emp']) ? $_POST['rua_emp'] : '';
 
-$bairro_empresa = isset($_POST['bairro_empresa']) ? $_POST['bairro_empresa'] : '';
+$num_emp = isset($_POST['num_emp']) ? $_POST['num_emp'] : '';
 
-$cidade_empresa = isset($_POST['cidade_empresa']) ? $_POST['cidade_empresa'] : '';
+$bairro_emp = isset($_POST['bairro_emp']) ? $_POST['bairro_emp'] : '';
 
-$uf_empresa = isset($_POST['ufempresa_cont']) ? $_POST['ufempresa_cont'] : '';
+$cidade_emp = isset($_POST['cidade_emp']) ? $_POST['cidade_emp'] : '';
 
-$cepemp = isset($_POST['cepemp']) ? $_POST['cepemp'] : '';
+$uf_emp = isset($_POST['uf_emp']) ? $_POST['uf_emp'] : '';
 
-$Telefone_emp = isset($_POST['Telefone_emp']) ? $_POST['Telefone_emp'] : '';
+$cep_emp = isset($_POST['cep_emp']) ? $_POST['cep_emp'] : '';
 
-$email_empresa = isset($_POST['email_empresa']) ? $_POST['email_empresa'] : '';
+$Tel_emp = isset($_POST['Tel_emp']) ? $_POST['Tel_emp'] : '';
 
-$gera_faturamento = isset($_POST['fat21']) ? $_POST['fat21'] : '';
+$email_emp = isset($_POST['email_emp']) ? $_POST['email_emp'] : '';
 
-$quanto = isset($_POST['quanto']) ? $_POST['quanto'] : '';
+$faturamento = isset($_POST['faturamento']) ? $_POST['faturamento'] : '';
 
-$segmento_negocio = isset($_POST['seg']) ? $_POST['seg'] : '';
+$fat_mensal = isset($_POST['fat_mensal']) ? $_POST['fat_mensal'] : '';
 
-$data_abertura = isset($_POST['data_empresa']) ? $_POST['data_empresa'] : '';
+$segmento = isset($_POST['segmento']) ? $_POST['segmento'] : '';
 
-$tem_funcionarios = isset($_POST['funcio']) ? $_POST['funcio'] : '';
+$dt_abertura = isset($_POST['dt_abertura']) ? $_POST['dt_abertura'] : '';
 
-$demanda_da_empresa = isset($_POST['textarea']) ? $_POST['textarea'] : '';
+$funcionario = isset($_POST['funcionario']) ? $_POST['funcionario'] : '';
 
-$insert = "INSERT INTO usabilidade (nome, cpf, rg, orgao, profissao, titulo, estado_civil, nascimento, sexo, rua_cont, num_cont, bairro_cont, cidade_cont, uf_cont, cep_cont, telefone_cont, celular, email, escolaridade, rendimento, membros, fantasia, razao, cnpj, cod_acesso, recibo, rua_emp, num_emp, bairro_emp, cidade_emp, uf_empresa, cep_empresa, tel_empresa, email_emp, gera, valor, segmento, data_abertura, funcionarios, demanda)";
-VALUES ()
+$demanda = isset($_POST['demanda']) ? $_POST['demanda'] : '';
+
+$insert = "INSERT INTO usabilidade (nome, cpf, rg, orgao, profissao, titulo, estado_civil, nascimento,
+ sexo, rua_cont, num_cont, bairro_cont, cidade_cont, uf_cont, cep_cont, Tel_cont_cont, celular, email,
+ escolaridade, rend_fam , membros, fantasia, razao, cnpj, cod_acesso, recibo, rua_emp, num_emp, bairro_emp,
+ cidade_emp, uf_empresa, cep_empresa, tel_empresa, email_emp, gera, valor, segmento, data_abertura, 
+ funcionarios, demanda)
+
+VALUES ('$nome_cont','$cpf','$rg','$orgao','$Profissao','$titulo',$est_civ,'$dt_nasc','$sexo','$rua_cont'
+,$num_cont,'$bairro','$cidade','$uf_cont',$cep_cont,'$Tel_cont','$cel_cont','$email_cont',$escolaridade
+,$rend_fam,$membros,'$fantasia','$razao','$cnpj','$cod','$num_ir','$rua_emp','$num_emp','$bairro_emp'
+,'$cidade_emp','$uf_emp',$cep_emp,'$Tel_emp','$email_emp',$faturamento,'$fat_mensal',$segmento,'$dt_abertura'
+,$funcionario,'$demanda' )";
+
 $query = mysqli_query($conexao, $insert);
 
+if ($query == true){
+    echo '<script>alert("cadastrado com sucesso");
+    window,location="index.html";
+    </script>';
+}
 ?>
